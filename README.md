@@ -8,9 +8,15 @@ Funciones:
 
 Comprueba si el o los paquetes estan instalados
 
+devolviendo el valor True si es Afirmativo
+
 ```
-pacman.check("paquete")
+check = pacman.check("spotify")
+print(check)
+
+>>>True
 ```
+Puedes comprobar varios paquetes separandolos por espacios
 
 - Install
 
