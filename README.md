@@ -6,7 +6,7 @@ Funciones:
 
 - Check
 
-Comprueba si el paquete esta instalado
+Comprueba si el o los paquetes estan instalados
 
 ```
 pacman.check("paquete")
