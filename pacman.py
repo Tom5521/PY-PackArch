@@ -58,9 +58,14 @@ def aur(nombre_aur):
     chdir(current_directoy)
     installed()
 
-def upgrade():
-    clear()
-    print("Actualizando...")
-    sys("sudo pacman -Syu --noconfirm >/dev/null 2>&1")
-    clear()
-    print("Actualizacion Completada")
+def upgrade(condu_1 = "",condu_2=""):
+    match condu_1:
+        case "-v":
+            print("Actualizando...")
+            sys("sudo pacman -Syu --noconfirm"+sp+condu_2)
+        case _:
+            clear()
+            print("Actualizando...")
+            sys("sudo pacman -Syu --noconfirm"+sp+condu_1+sp+">/dev/null 2>&1")
+            clear()
+            print("Actualizacion Completada")
