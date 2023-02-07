@@ -38,6 +38,7 @@ pacman.aur("visual-studio-code-bin")
 lamentablemente solo se pueden instalar uno ala vez y no acepta condiciones
 **posiblemente añada las condiciones en una futura actualizacion**
 - Upgrade
+
 Sirve para actualizar el sistema y tabien puede añadir argumentos como a ```pacman.install()```
 
 ```
