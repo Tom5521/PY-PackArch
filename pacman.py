@@ -10,6 +10,7 @@ def installed():
     print("Instalado")
     sl(1)
 
+sp = " "
 
 def check(nombre_check):
     comprobator = False
@@ -23,12 +24,18 @@ def check(nombre_check):
     sys("rm /tmp/tmp-check")
     return comprobator
 
-def install(nombre_pacman):
-    clear()
-    print("Instalando " + nombre_pacman + "...")
-    sys("sudo pacman -S " + nombre_pacman + " --noconfirm|ls > .out && rm -rf .out")
-    clear()
-    installed()
+def install(nombre_pacman,cond_1="",cond_2 = ""):
+    match cond_1:
+        case "-v":
+            print("Instalando " + nombre_pacman + "...")
+            sys("sudo pacman -S " + nombre_pacman +sp+cond_2+sp+" --noconfirm")
+            print("Instalado")
+        case _:
+            clear()
+            print("Instalando " + nombre_pacman + "...")
+            sys("sudo pacman -S " + nombre_pacman + " --noconfirm"+sp+cond_1+"|ls > .out && rm -rf .out")
+            clear()
+            installed()
 
 def refresh():
     clear()

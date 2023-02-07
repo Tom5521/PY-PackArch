@@ -29,6 +29,17 @@ Puede añadir mas argumentos despues de los paquetes como lo haria con pacman
 ```
 pacman.install("vim --needed")
 ```
+si quiere mostrar la salida puede poner de condicion ```,"-v"```
+Algo asi:
+```
+pacman.install("wine","-v")
+```
+si quiere añadir mas argumentos a eso tendra que hacer algo asi
+```
+pacman.install("wine","-v","--needed")
+```
+
+
 - Refresh
 
 Sirve para Actualizar los repositorios
