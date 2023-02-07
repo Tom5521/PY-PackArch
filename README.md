@@ -8,7 +8,7 @@ Puede incorporarlo a su proyecto de manera mas facil ejecutando wget en la ruta 
 wget https://raw.githubusercontent.com/Tom5521/PY-pacman/master/pacman.py
 ```
 
-Funciones:
+-- Funciones:
 
 - Check
 
