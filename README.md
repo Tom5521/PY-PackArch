@@ -52,7 +52,12 @@ Sirve para instalar paquetes desde los AUR
 ```
 pacman.aur("visual-studio-code-bin")
 ```
-lamentablemente solo se pueden instalar uno ala vez y no acepta condiciones
+se pueden poner varias cosas a instalar por ejemplo
+```
+pacman.aur("lutris","wine","spotify")
+```
+Solo se pueden poner hasta tres cosas a la vez
+lamentablemente no acepta condiciones
 **posiblemente añada las condiciones en una futura actualizacion**
 - Upgrade
 
