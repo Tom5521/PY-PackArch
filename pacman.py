@@ -15,12 +15,12 @@ def check(nombre_check):
     comprobator = False
     chdir(current_directoy)
     clear()
-    sys("pacman -Q "+ nombre_check + "> src/temp")
-    optemp = open("src/temp","r")
+    sys("pacman -Q "+ nombre_check + "> /tmp/tmp-check")
+    optemp = open("/tmp/tmp-check","r")
     readtemp = optemp.read()
     if nombre_check in readtemp: comprobator = True
     else: comprobator = False
-    sys("rm src/temp")
+    sys("rm /tmp/tmp-check")
     return comprobator
 
 def install(nombre_pacman):
