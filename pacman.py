@@ -44,19 +44,46 @@ def refresh():
     clear()
     print("Repos Actualizados")
 
-def aur(nombre_aur):
-    clear()
-    url = "https://aur.archlinux.org/" + nombre_aur + ".git"
-    chdir("/tmp")
-    print("Clonando " + nombre_aur + "...")
-    sys("git clone "+ url + ">/dev/null 2>&1")
-    clear()
-    chdir(nombre_aur)
-    print("Instalando " + nombre_aur + "...")
-    sys("makepkg -si --noconfirm >/dev/null 2>&1")
-    clear()
-    chdir(current_directoy)
-    installed()
+def aur(nombre_aur,nombre_aur_2 ="",nombre_aur_3 =""):
+    if nombre_aur != "":
+        clear()
+        url = "https://aur.archlinux.org/" + nombre_aur + ".git"
+        chdir("/tmp")
+        print("Clonando " + nombre_aur + "...")
+        sys("git clone "+ url + ">/dev/null 2>&1")
+        clear()
+        chdir(nombre_aur)
+        print("Instalando " + nombre_aur + "...")
+        sys("makepkg -si --noconfirm >/dev/null 2>&1")
+        clear()
+        chdir(current_directoy)
+        installed()
+    if nombre_aur_2 != "":
+        clear()
+        url = "https://aur.archlinux.org/" + nombre_aur_2 + ".git"
+        chdir("/tmp")
+        print("Clonando " + nombre_aur_2 + "...")
+        sys("git clone "+ url + ">/dev/null 2>&1")
+        clear()
+        chdir(nombre_aur_2)
+        print("Instalando " + nombre_aur_2 + "...")
+        sys("makepkg -si --noconfirm >/dev/null 2>&1")
+        clear()
+        chdir(current_directoy)
+        installed()
+    if nombre_aur_3 != "":
+        clear()
+        url = "https://aur.archlinux.org/" + nombre_aur_3 + ".git"
+        chdir("/tmp")
+        print("Clonando " + nombre_aur_3 + "...")
+        sys("git clone "+ url + ">/dev/null 2>&1")
+        clear()
+        chdir(nombre_aur_3)
+        print("Instalando " + nombre_aur_3 + "...")
+        sys("makepkg -si --noconfirm >/dev/null 2>&1")
+        clear()
+        chdir(current_directoy)
+        installed()
 
 def upgrade(condu_1 = "",condu_2=""):
     match condu_1:
