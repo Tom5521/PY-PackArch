@@ -1,6 +1,6 @@
 <img src="https://github.com/Tom5521/PY-pacman/blob/82a8b8ea22d748ab728b7acbf174562c9adf2f72/PY-pacman.png" width="1000" height="100" />
 
-### Una libreria de python para poder manejar el gestor de paquetes pacman desde python
+### Una libreria de python para poder manejar el gestor de paquetes pacman
 
 Puede incorporarlo a su proyecto de manera mas facil ejecutando wget en la ruta deseada
 
