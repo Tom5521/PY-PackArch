@@ -1,4 +1,9 @@
 
+# Creado por Tom5521 o Angel pa'los cuates
+# Bajo la licencia GPL 3.0
+
+# PY-pacman https://github.com/Tom5521/PY-pacman
+
 from os import getcwd,chdir
 from os import system as sys
 from time import sleep as sl
