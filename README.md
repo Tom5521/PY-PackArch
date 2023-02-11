@@ -90,3 +90,12 @@ Tambien tiene la funcion para ver lo que hace en la consola añadiendo la condic
 pacman.upgrade("-v","--needed --noconfirm")
 ```
 Tambien puede poner condiciones como lo hace en pacman
+
+### Añadiendo un poco de data extra:
+Este proyecto fue creado como una difurcacion de mi otro proyecto osea **Arch-Instalator**
+Y este proyecto al parecer tomara su propio camino ya que el pacman.py del proyecto mencionado anteriormente se quedara en la version 1.0.0 por temas de sintaxis
+o tal vez tome su propio rumbo adaptandose a ese proyecto
+por ahora eso es todo
+
+#### PD:
+### Sigo sin ideas 
