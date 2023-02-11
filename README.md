@@ -1,16 +1,10 @@
-<img src="https://github.com/Tom5521/PY-pacman/blob/82a8b8ea22d748ab728b7acbf174562c9adf2f72/PY-pacman.png" width="1000" height="120" />
+<img src="https://github.com/Tom5521/PY-pacman/blob/82a8b8ea22d748ab728b7acbf174562c9adf2f72/PY-pacman.png" width="1000" height="100" />
 
-### Una libreria de python para poder manejar el gestor de paquetes pacman
+#### Una libreria de python para poder manejar el gestor de paquetes pacman desde python
 
-Puede incorporarlo a su proyecto de manera mas facil ejecutando wget en la ruta deseada
+Funciones:
 
-```
-wget https://raw.githubusercontent.com/Tom5521/PY-pacman/master/pacman.py
-```
-
-#### Funciones:
-
- - Check
+- Check
 
 Comprueba si el o los paquetes estan instalados
 
@@ -72,4 +66,8 @@ Sirve para actualizar el sistema y tabien puede añadir argumentos como a ```pac
 ```
 pacman.upgrade()
 ```
-Al igual que con ```pacman.aur()``` no acepta condiciones y repito **posiblemente añada las condiciones en una futura actualizacion**
+Tambien tiene la funcion para ver lo que hace en la consola añadiendo la condicion "-v",si coloca la funcion anteriormente mencionada,si quiere sumarle a eso condiciones de pacman tiene que hacerlo como se muestra adelante
+```
+pacman.upgrade("-v","--needed --noconfirm")
+```
+Tambien puede poner condiciones como lo hace en pacman
