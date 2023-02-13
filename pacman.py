@@ -3,13 +3,18 @@
 
 # PY-pacman https://github.com/Tom5521/PY-pacman
 
-# V1.2.0
+# V1.3.0
 
 from os import getcwd, chdir
 from os import system as sys
 from time import sleep as sl
 
 current_directoy = getcwd()
+
+hide = [">/dev/null 2>&1"]
+sinc = " -S "
+nombres_aur = []
+sp = " "
 
 
 def clear():
@@ -19,9 +24,6 @@ def clear():
 def installed():
     print("Instalado")
     sl(1)
-
-
-sp = " "
 
 
 def check(nombre_check):
@@ -63,52 +65,35 @@ def install(nombre_pacman, cond_1="", cond_2=""):
 def refresh():
     clear()
     print("Actualizando repos...")
-    sys("sudo pacman -Syy >/dev/null 2>&1")
+    sys("sudo pacman -Syy " + hide[0])
     clear()
     print("Repos Actualizados")
 
 
-sinc = " -S "
-
-
 class aur:
-    def install(nombre_aur, nombre_aur_2="", nombre_aur_3=""):
+    def install(
+        nombre_aur, nombre_aur_2="", nombre_aur_3="", nombre_aur_4="", nombre_aur_5=""
+    ):
         if nombre_aur != "":
-            clear()
-            url = "https://aur.archlinux.org/" + nombre_aur + ".git"
-            chdir("/tmp")
-            print("Clonando " + nombre_aur + "...")
-            sys("git clone " + url + ">/dev/null 2>&1")
-            clear()
-            chdir(nombre_aur)
-            print("Instalando " + nombre_aur + "...")
-            sys("makepkg -si --noconfirm >/dev/null 2>&1")
-            clear()
-            chdir(current_directoy)
-            installed()
+            nombres_aur.append(nombre_aur)
         if nombre_aur_2 != "":
-            clear()
-            url = "https://aur.archlinux.org/" + nombre_aur_2 + ".git"
-            chdir("/tmp")
-            print("Clonando " + nombre_aur_2 + "...")
-            sys("git clone " + url + ">/dev/null 2>&1")
-            clear()
-            chdir(nombre_aur_2)
-            print("Instalando " + nombre_aur_2 + "...")
-            sys("makepkg -si --noconfirm >/dev/null 2>&1")
-            clear()
-            chdir(current_directoy)
-            installed()
+            nombres_aur.append(nombre_aur_2)
         if nombre_aur_3 != "":
+            nombres_aur.append(nombre_aur_3)
+        if nombre_aur_4 != "":
+            nombres_aur.append(nombre_aur_4)
+        if nombre_aur_5 != "":
+            nombres_aur.append(nombre_aur_5)
+        for i in nombres_aur:
             clear()
-            url = "https://aur.archlinux.org/" + nombre_aur_3 + ".git"
+            url = "https://aur.archlinux.org/" + i + ".git"
             chdir("/tmp")
-            print("Clonando " + nombre_aur_3 + "...")
-            sys("git clone " + url + ">/dev/null 2>&1")
+            print("Clonando " + i + "...")
+            sys("git clone " + url + hide[0])
             clear()
-            chdir(nombre_aur_3)
-            print("Instalando " + nombre_aur_3 + "...")
-            sys("makepkg -si --noconfirm >/dev/null 2>&1")
+            chdir(i)
+            print("Instalando " + i + "...")
+            sys("makepkg -si --noconfirm" + hide[0])
             clear()
             chdir(current_directoy)
             installed()
@@ -128,7 +113,7 @@ class aur:
                 )
                 print("Instalado")
             case "-s":
-                sys(nombre_gestor + sp + app_gestor + " >/dev/null 2>&1")
+                sys(nombre_gestor + sp + app_gestor + hide[0])
             case _:
                 clear()
                 print("Instalando " + app_gestor + "...")
@@ -139,7 +124,7 @@ class aur:
                     + " --noconfirm"
                     + sp
                     + cond_1
-                    + ">/dev/null 2>&1"
+                    + hide[0]
                 )
                 clear()
                 installed()
@@ -153,6 +138,6 @@ def upgrade(condu_1="", condu_2=""):
         case _:
             clear()
             print("Actualizando...")
-            sys("sudo pacman -Syu --noconfirm" + sp + condu_1 + sp + ">/dev/null 2>&1")
+            sys("sudo pacman -Syu --noconfirm" + sp + condu_1 + sp + hide[0])
             clear()
             print("Actualizacion Completada")

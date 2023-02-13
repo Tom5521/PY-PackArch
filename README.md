@@ -54,9 +54,9 @@ pacman.aur.install("visual-studio-code-bin")
 ```
 se pueden poner varias cosas a instalar por ejemplo
 ```
-pacman.aur.install("lutris","wine","spotify")
+pacman.aur.install("<paquete e>","<paquete d>","<paquete c>","<paquete b>","<paquete a>")
 ```
-Solo se pueden poner hasta tres cosas a la vez
+Solo se pueden poner hasta cinco cosas a la vez
 lamentablemente no acepta condiciones
 **posiblemente añada las condiciones en una futura actualizacion**
 - AUR.MANAGER
