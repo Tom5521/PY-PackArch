@@ -3,7 +3,7 @@
 
 # PY-pacman https://github.com/Tom5521/PY-pacman
 
-# V1.3.0
+# V1.4.0
 
 from os import getcwd, chdir
 from os import system as sys
@@ -13,7 +13,6 @@ current_directoy = getcwd()
 
 hide = [">/dev/null 2>&1"]
 sinc = " -S "
-nombres_aur = []
 sp = " "
 
 
@@ -70,21 +69,19 @@ def refresh():
     print("Repos Actualizados")
 
 
+def remove(removes, cond_1=""):
+    match cond_1:
+        case "-v":
+            sys("sudo pacman -R" + sp + removes + " --noconfirm")
+        case "-f":
+            sys("sudo pacman -Rdd" + sp + removes + " --noconfirm" + hide[0])
+        case _:
+            sys("sudo pacman -R" + sp + removes + " --noconfirm" + hide[0])
+
+
 class aur:
-    def install(
-        nombre_aur, nombre_aur_2="", nombre_aur_3="", nombre_aur_4="", nombre_aur_5=""
-    ):
-        if nombre_aur != "":
-            nombres_aur.append(nombre_aur)
-        if nombre_aur_2 != "":
-            nombres_aur.append(nombre_aur_2)
-        if nombre_aur_3 != "":
-            nombres_aur.append(nombre_aur_3)
-        if nombre_aur_4 != "":
-            nombres_aur.append(nombre_aur_4)
-        if nombre_aur_5 != "":
-            nombres_aur.append(nombre_aur_5)
-        for i in nombres_aur:
+    def install(apps_aur):
+        for i in apps_aur.split():
             clear()
             url = "https://aur.archlinux.org/" + i + ".git"
             chdir("/tmp")

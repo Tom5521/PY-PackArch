@@ -2,9 +2,9 @@
 
 #### Una libreria de python para poder manejar el gestor de paquetes pacman desde python
 
-Funciones:
+## Funciones:
 
-- Check
+#### Check
 
 Comprueba si el o los paquetes estan instalados
 
@@ -18,7 +18,7 @@ print(check)
 ```
 Puedes comprobar varios paquetes separandolos por espacios
 
-- Install
+#### Install
 
 Instala el o los paquetes puestos en la entrada de la funcion
 ```
@@ -40,7 +40,7 @@ pacman.install("wine","-v","--needed")
 ```
 
 
-- Refresh
+#### Refresh
 
 Sirve para Actualizar los repositorios
 ```
@@ -52,14 +52,13 @@ Sirve para instalar paquetes desde los AUR
 ```
 pacman.aur.install("visual-studio-code-bin")
 ```
-se pueden poner varias cosas a instalar por ejemplo
+se pueden poner varias apps a instalar por ejemplo
 ```
-pacman.aur.install("<paquete e>","<paquete d>","<paquete c>","<paquete b>","<paquete a>")
+pacman.aur.install("lutris wine proton vim")
 ```
-Solo se pueden poner hasta cinco cosas a la vez
-lamentablemente no acepta condiciones
+Las apps a instalar se tienen que separar por espacios
 **posiblemente añada las condiciones en una futura actualizacion**
-- AUR.MANAGER
+#### AUR.MANAGER
 Esta opcion es para instalar desde los aur pero con un gestor como yay o paru
 
 Su sintaxis es mas o menos asi
@@ -91,6 +90,16 @@ pacman.upgrade("-v","--needed --noconfirm")
 ```
 Tambien puede poner condiciones como lo hace en pacman
 
+#### Remove
+Sirve para borrar paquetes su sintaxis es la siguiente
+```
+pacman.remove("paquete2 paquete2","-f")
+                   ^         ^      ^-Conficion a Ejecutar 
+                   |---------Nombres de paquetes a borrar
+```
+##### Condiciones:
+- "-f " sirve para forzar el borrado de un programa sin importar que apps dependan de ella
+- "-v " sirve para ver la salida de pacman
 ### Añadiendo un poco de data extra:
 Este proyecto fue creado como una difurcacion de mi otro proyecto osea **Arch-Instalator**
 Y este proyecto al parecer tomara su propio camino ya que el pacman.py del proyecto mencionado anteriormente se quedara en la version 1.0.0 por temas de sintaxis
