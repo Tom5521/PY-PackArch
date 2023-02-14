@@ -1,5 +1,7 @@
 <img src="https://github.com/Tom5521/PY-pacman/blob/82a8b8ea22d748ab728b7acbf174562c9adf2f72/PY-pacman.png" width="1000" height="100" />
 
+[![wakatime](https://wakatime.com/badge/github/Tom5521/PY-pacman.svg)](https://wakatime.com/badge/github/Tom5521/PY-pacman)
+
 #### Una libreria de python para poder manejar el gestor de paquetes pacman desde python
 
 
