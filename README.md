@@ -46,7 +46,7 @@ Sirve para Actualizar los repositorios
 ```
 pacman.refresh()
 ```
-- Aur.Install
+#### Aur.Install
 
 Sirve para instalar paquetes desde los AUR
 ```
