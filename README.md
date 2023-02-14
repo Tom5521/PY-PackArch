@@ -46,7 +46,7 @@ Sirve para Actualizar los repositorios
 ```
 pacman.refresh()
 ```
-- AUR.INSTALL
+- Aur.Install
 
 Sirve para instalar paquetes desde los AUR
 ```
@@ -58,7 +58,7 @@ pacman.aur.install("lutris wine proton vim")
 ```
 Las apps a instalar se tienen que separar por espacios
 **posiblemente añada las condiciones en una futura actualizacion**
-#### AUR.MANAGER
+#### Aur.Manager
 Esta opcion es para instalar desde los aur pero con un gestor como yay o paru
 
 Su sintaxis es mas o menos asi
