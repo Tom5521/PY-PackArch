@@ -100,6 +100,21 @@ pacman.remove("paquete2 paquete2","-f")
 ##### Condiciones:
 - "-f " sirve para forzar el borrado de un programa sin importar que apps dependan de ella
 - "-v " sirve para ver la salida de pacman
+
+#### Verbose
+Lo que hace es que se vea la salida de la consola a funciones de la libreria
+##### Funciones
+- ```verbose.all()``` hace que todas las operaciones de instalacion muestren su salida en consola
+- ```verbose.aur()``` hace que todas las operaciones con respecto a los aur muestren su salida en consola
+- ```verbose.pacman()``` hace que todas las operaciones de instalacion de ```pacman.install``` se muestren en la consola
+#### Un ejemplo de la sintaxis
+```
+pacman.aur.install("wine") #no muestra salida en la consola
+
+pacman.verbose.aur()
+pacman.aur.install("grapejuice") #Esta ves si muestra la salida en la consola
+#Se usa de la misma manera con sus otras funciones anteriormente explicadas
+```
 ### Añadiendo un poco de data extra:
 Este proyecto fue creado como una difurcacion de mi otro proyecto osea **Arch-Instalator**
 Y este proyecto al parecer tomara su propio camino ya que el pacman.py del proyecto mencionado anteriormente se quedara en la version 1.0.0 por temas de sintaxis

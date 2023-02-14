@@ -3,7 +3,7 @@
 
 # PY-pacman https://github.com/Tom5521/PY-pacman
 
-# V1.4.0
+# V1.5.0
 
 from os import getcwd, chdir
 from os import system as sys
@@ -11,7 +11,7 @@ from time import sleep as sl
 
 current_directoy = getcwd()
 
-hide = [">/dev/null 2>&1"]
+hide = [">/dev/null 2>&1", "|ls > .out && rm -rf .out"]
 sinc = " -S "
 sp = " "
 
@@ -23,6 +23,24 @@ def clear():
 def installed():
     print("Instalado")
     sl(1)
+
+
+class verbose:
+    def all():
+        hide.pop(1)
+        hide.pop(0)
+        hide.append("")
+        hide.append("")
+
+    def aur():
+        hide.pop(1)
+        hide.pop(0)
+        hide.append("")
+        hide.append("|ls > .out && rm -rf .out")
+
+    def pacman():
+        hide.pop(1)
+        hide.append("")
 
 
 def check(nombre_check):
@@ -55,7 +73,7 @@ def install(nombre_pacman, cond_1="", cond_2=""):
                 + " --noconfirm"
                 + sp
                 + cond_1
-                + "|ls > .out && rm -rf .out"
+                + hide[1]
             )
             clear()
             installed()
