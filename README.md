@@ -2,6 +2,12 @@
 
 #### Una libreria de python para poder manejar el gestor de paquetes pacman desde python
 
+
+Puede añadirlo rapidamente a su proyecto ejecutando este comando en la carpeta donde quiera que esté
+```
+wget https://raw.githubusercontent.com/Tom5521/PY-pacman/master/pacman.py
+```
+
 ## Funciones:
 
 #### Check
