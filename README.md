@@ -1,16 +1,13 @@
 <img src="https://github.com/Tom5521/PY-pacman/blob/82a8b8ea22d748ab728b7acbf174562c9adf2f72/PY-pacman.png" width="1000" height="100" />
 
 
-#### A Python library to be able to handle pacman package manager from Python
-
-
 [![wakatime](https://wakatime.com/badge/github/Tom5521/PY-pacman.svg)](https://wakatime.com/badge/github/Tom5521/PY-pacman)
 [![CodeFactor](https://www.codefactor.io/repository/github/tom5521/py-pacman/badge)](https://www.codefactor.io/repository/github/tom5521/py-pacman)
 ![GitHub repo size](https://img.shields.io/github/repo-size/Tom5521/PY-pacman)
 ![GitHub last commit](https://img.shields.io/github/last-commit/Tom5521/PY-pacman)
 
 
-
+#### A Python library to be able to handle pacman package manager from Python
 
 
 You can quickly add it to your project by running this command in the folder wherever it is
