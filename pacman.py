@@ -21,7 +21,7 @@ def clear():
 
 
 def installed():
-    print("Instalado")
+    print("Installed")
     sl(1)
 
 
@@ -61,12 +61,12 @@ def check(nombre_check):
 def install(nombre_pacman, cond_1="", cond_2=""):
     match cond_1:
         case "-v":
-            print("Instalando " + nombre_pacman + "...")
+            print("Installing " + nombre_pacman + "...")
             sys("sudo pacman -S " + nombre_pacman + sp + cond_2 + sp + " --noconfirm")
-            print("Instalado")
+            print("Installed")
         case _:
             clear()
-            print("Instalando " + nombre_pacman + "...")
+            print("Installing " + nombre_pacman + "...")
             sys(
                 "sudo pacman -S "
                 + nombre_pacman
@@ -81,10 +81,10 @@ def install(nombre_pacman, cond_1="", cond_2=""):
 
 def refresh():
     clear()
-    print("Actualizando repos...")
+    print("Updating repos...")
     sys("sudo pacman -Syy " + hide[0])
     clear()
-    print("Repos Actualizados")
+    print("Repos Updated")
 
 
 def remove(removes, cond_1=""):
@@ -103,11 +103,11 @@ class aur:
             clear()
             url = "https://aur.archlinux.org/" + i + ".git"
             chdir("/tmp")
-            print("Clonando " + i + "...")
+            print("Cloning " + i + "...")
             sys("git clone " + url + hide[0])
             clear()
             chdir(i)
-            print("Instalando " + i + "...")
+            print("Installing " + i + "...")
             sys("makepkg -si --noconfirm" + hide[0])
             clear()
             chdir(current_directoy)
@@ -116,7 +116,7 @@ class aur:
     def manager(nombre_gestor, app_gestor, cond_1="", cond_2=""):
         match cond_1:
             case "-v":
-                print("Instalando " + app_gestor + "...")
+                print("Installing " + app_gestor + "...")
                 sys(
                     nombre_gestor
                     + sinc
@@ -126,12 +126,12 @@ class aur:
                     + sp
                     + " --noconfirm"
                 )
-                print("Instalado")
+                print("Installed")
             case "-s":
                 sys(nombre_gestor + sp + app_gestor + hide[0])
             case _:
                 clear()
-                print("Instalando " + app_gestor + "...")
+                print("Installing " + app_gestor + "...")
                 sys(
                     nombre_gestor
                     + sinc
@@ -148,11 +148,11 @@ class aur:
 def upgrade(condu_1="", condu_2=""):
     match condu_1:
         case "-v":
-            print("Actualizando...")
+            print("Updating...")
             sys("sudo pacman -Syu --noconfirm" + sp + condu_2)
         case _:
             clear()
             print("Actualizando...")
             sys("sudo pacman -Syu --noconfirm" + sp + condu_1 + sp + hide[0])
             clear()
-            print("Actualizacion Completada")
+            print("Update Complete")
