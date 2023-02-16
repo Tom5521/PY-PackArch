@@ -16,6 +16,7 @@ You can quickly add or update in to your project running this command in the fol
 wget https://raw.githubusercontent.com/Tom5521/PY-pacman/master/packarch.py
 ```
 Or can install it using this command ```pip install py-packarch```
+
 You can import it in a more comfortable way by writing ```import packarch as pacman``` at the top of the file
 
 ## Functions:
