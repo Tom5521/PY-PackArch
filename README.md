@@ -1,4 +1,4 @@
-<img src="https://res.cloudinary.com/dqjsgmkxo/image/upload/v1676570631/Captura_de_pantalla_de_2023-02-16_15-00-14_ubphd6.png" width="1000" height="100" />
+<img src="https://res.cloudinary.com/dqjsgmkxo/image/upload/v1676571071/Captura_de_pantalla_de_2023-02-16_15-08-13_iiarxj.png" width="1000" height="100" />
 
 
 [![wakatime](https://wakatime.com/badge/github/Tom5521/PY-pacman.svg)](https://wakatime.com/badge/github/Tom5521/PY-pacman)
