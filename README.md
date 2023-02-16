@@ -2,7 +2,7 @@
 
 
 [![wakatime](https://wakatime.com/badge/github/Tom5521/PY-pacman.svg)](https://wakatime.com/badge/github/Tom5521/PY-pacman)
-[![CodeFactor](https://www.codefactor.io/repository/github/tom5521/py-pacman/badge)](https://www.codefactor.io/repository/github/tom5521/py-pacman)
+[![CodeFactor](https://www.codefactor.io/repository/github/tom5521/py-packarch/badge)](https://www.codefactor.io/repository/github/tom5521/py-packarch)
 ![GitHub repo size](https://img.shields.io/github/repo-size/Tom5521/PY-pacman)
 ![GitHub last commit](https://img.shields.io/github/last-commit/Tom5521/PY-pacman)
 
