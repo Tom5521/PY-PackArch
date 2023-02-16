@@ -1,4 +1,4 @@
-<img src="https://github.com/Tom5521/PY-pacman/blob/82a8b8ea22d748ab728b7acbf174562c9adf2f72/PY-pacman.png" width="1000" height="100" />
+<img src="https://res.cloudinary.com/dqjsgmkxo/image/upload/v1676570631/Captura_de_pantalla_de_2023-02-16_15-00-14_ubphd6.png" width="1000" height="100" />
 
 
 [![wakatime](https://wakatime.com/badge/github/Tom5521/PY-pacman.svg)](https://wakatime.com/badge/github/Tom5521/PY-pacman)
@@ -13,9 +13,10 @@
 
 You can quickly add or update in to your project running this command in the folder wherever it is
 ```
-wget https://raw.githubusercontent.com/Tom5521/PY-pacman/master/py_pacman.py
+wget https://raw.githubusercontent.com/Tom5521/PY-pacman/master/packarch.py
 ```
-You can import it in a more comfortable way by writing ```import py_pacman as pacman``` at the top of the file
+Or can install it using this command ```pip install packarch```
+You can import it in a more comfortable way by writing ```import packarch as pacman``` at the top of the file
 
 ## Functions:
 
@@ -26,7 +27,7 @@ Check if the package entered is installed
 returning the True value if it is affirmative
 
 ```
-check = py_pacman.check("spotify")
+check = packarch.check("spotify")
 print(check)
 
 >>>True
@@ -37,21 +38,21 @@ You can check several packages by separating them by spaces
 
 Install the packages or in the entry of the function
 ```
-py_pacman.install("wine-stable neovim")
+packarch.install("wine-stable neovim")
 ```
 If you want to install more than one package you can separate through spaces
 You can add more arguments after packages as I would do with Pacman
 ```
-py_pacman.install("vim --needed")
+packarch.install("vim --needed")
 ```
 If you want to show the exit you can put the condition ```,"-v"```
 Something like that:
 ```
-py_pacman.install("wine","-v")
+packarch.install("wine","-v")
 ```
 If you want to add more arguments to that you will have to do something like that
 ```
-py_pacman.install("wine","-v","--needed")
+packarch.install("wine","-v","--needed")
 ```
 
 
@@ -59,17 +60,17 @@ py_pacman.install("wine","-v","--needed")
 
 It serves to update the repositories
 ```
-py_pacman.refresh()
+packarch.refresh()
 ```
 #### Aur.Install
 
 It serves to install packages from the AUR
 ```
-py_pacman.aur.install("visual-studio-code-bin")
+packarch.aur.install("visual-studio-code-bin")
 ```
 You can put several apps to be installed for example
 ```
-py_pacman.aur.install("lutris wine proton vim")
+packarch.aur.install("lutris wine proton vim")
 ```
 Las apps a instalar se tienen que separar por espacios
 **possibly add the conditions in a future update**
@@ -78,7 +79,7 @@ This option is to install from the AUR but with a manager like Yay or Paru
 
 Your syntax is something like that :
 ```
-py_pacman.aur.manager("paru","vim base-devel","-v")
+packarch.aur.manager("paru","vim base-devel","-v")
                       ^        ^             ^-Condition
                       |        |-Packages to be installed     
                       |-AUR manager 
@@ -87,28 +88,28 @@ py_pacman.aur.manager("paru","vim base-devel","-v")
     -yay
     -pikaur
     -paru
-    -pacman(It is recommended to use ```py_pacman.install()```)
+    -pacman(It is recommended to use ```packarch.install()```)
     -Any other that has a syntax similar to the above
 Condiciones:
     "-v" It is used to see the terminal output (recommended to see errors)
     "-s" It serves to get a selector for example when you put ```yay <package>``` It is only compatible with the managers who have this function
 - Upgrade
 
-It serves to update the system and tabien can add arguments such as ```py_pacman.install()```
+It serves to update the system and tabien can add arguments such as ```packarch.install()```
 
 ```
-py_pacman.upgrade()
+packarch.upgrade()
 ```
 It also has the function to see what it does in the console adding the condition "-v", if it places the aforementioned function, if you want to add to that pacman conditions have to do it as shown forward
 ```
-py_pacman.upgrade("-v","--needed --noconfirm")
+packarch.upgrade("-v","--needed --noconfirm")
 ```
 You can also put conditions as it does in pacman
 
 #### Remove
 It serves to erase packages its syntax is following
 ```
-py_pacman.remove("Package1 Package2","-f")
+packarch.remove("Package1 Package2","-f")
                    ^         ^      ^-Condition to execute 
                    |---------packages to remove
 ```
@@ -121,18 +122,18 @@ What it does is that the exit of the console is seen to the functions of the lib
 ##### Functions:
 - ```verbose.all()``` makes all installation operations show their output on console
 - ```verbose.aur()``` makes all operations regarding the AURs show their exit in console
-- ```verbose.pacman()``` makes all installation operations of ```py_pacman.install``` are shown in the console
+- ```verbose.pacman()``` makes all installation operations of ```packarch.install``` are shown in the console
 #### An example of syntax
 ```
-py_pacman.aur.install("wine") #Does not show output on the console
+packarch.aur.install("wine") #Does not show output on the console
 
-py_pacman.verbose.aur()
-py_pacman.aur.install("grapejuice") #This you see if it shows the exit on the console
+packarch.verbose.aur()
+packarch.aur.install("grapejuice") #This you see if it shows the exit on the console
 #It is used in the same way with its other functions previously explained
 ```
 ### Adding some extra data:
 This project was created as a dipurcation of my other project named [**Arch-App-Installer**](https://github.com/Tom5521/Arch-App-Installer)
-And this project will apparently take its own path since the py_pacman.py of the project mentioned above will stay in version 1.0.0 for syntax issues
+And this project will apparently take its own path since the packarch.py of the project mentioned above will stay in version 1.0.0 for syntax issues
 or maybe take your own course adapting to that project
 For now that's all
 

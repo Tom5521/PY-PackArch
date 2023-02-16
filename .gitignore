@@ -1,3 +1,6 @@
 prueba.py
 __pycache__
 saved.py
+dist
+build
+packarch.egg-info
