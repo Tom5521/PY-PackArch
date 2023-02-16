@@ -1,9 +1,5 @@
-# Creado por Tom5521 o Angel pa'los cuates
-# Bajo la licencia GPL 3.0
-
-# PY-pacman https://github.com/Tom5521/PY-pacman
-
-# V1.5.0
+# Created by Tom5521 or Angel
+# Under the GPL license 3.0
 
 from os import getcwd, chdir
 from os import system as sys
