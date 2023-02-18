@@ -110,20 +110,21 @@ You can also put conditions as it does in pacman
 #### Remove
 It serves to erase packages its syntax is following
 ```
-packarch.remove("Package1 Package2","-f")
+packarch.remove("Package1 Package2","vf")
                    ^         ^      ^-Condition to execute 
                    |---------packages to remove
 ```
 ##### Conditions:
-- "-f " It serves to force the deletion of a program regardless of what apps depend on it
-- "-v " It serves to see pacman exit
-
+- "f" It serves to force the deletion of a program regardless of what apps depend on it
+- "v" It serves to see pacman exit
+Conditions can be combined regardless of order
 #### Verbose
 What it does is that the exit of the console is seen to the functions of the library
 ##### Functions:
 - ```verbose.all()``` makes all installation operations show their output on console
 - ```verbose.aur()``` makes all operations regarding the AURs show their exit in console
 - ```verbose.pacman()``` makes all installation operations of ```packarch.install``` are shown in the console
+- ```verbose.quit_clear``` Remove the terminal cleaning
 #### An example of syntax
 ```
 packarch.aur.install("wine") #Does not show output on the console
@@ -132,6 +133,17 @@ packarch.verbose.aur()
 packarch.aur.install("grapejuice") #This you see if it shows the exit on the console
 #It is used in the same way with its other functions previously explained
 ```
+
+#### Get List
+
+An example of its syntax
+```
+packarch.get_list("package names","condition")
+```
+##### Conditions
+- ```o``` search in repositories
+- ```l``` search locally
+- Above conditions + ```e``` :Take out a description of the package depending on the first condition 
 ### Adding some extra data:
 This project was created as a dipurcation of my other project named [**Arch-App-Installer**](https://github.com/Tom5521/Arch-App-Installer)
 And this project will apparently take its own path since the packarch.py of the project mentioned above will stay in version 1.0.0 for syntax issues
