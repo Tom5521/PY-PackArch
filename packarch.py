@@ -1,7 +1,7 @@
 # Created by Tom5521 or Angel
 # Under the GPL license 3.0
 
-from os import getcwd, chdir
+from os import getcwd, chdir, listdir
 from os import system as sys
 from time import sleep as sl
 
@@ -107,14 +107,36 @@ def remove(removes, cond_1=""):
 
 class aur:
     def install(apps_aur, cond_1=""):
+        global force
+        force = False
         if "h" in cond_1:
             words[0, 4] = ""
+        if "f" in cond_1:
+            force = True
         for i in apps_aur.split():
             clear()
             url = "https://aur.archlinux.org/" + i + ".git"
             chdir("/tmp")
-            print("Cloning " + i + words[4])
-            sys("git clone " + url + hide[0])
+            if i in listdir("/tmp"):
+                print("Already Cloned")
+                sl(1)
+                if force == True:
+                    if "h" in cond_1:
+                        pass
+                    else:
+                        print("but... Force is Activated :/")
+                        sl(1)
+                        print("removing original clone...")
+                        sl(1)
+                    sys("sudo rm -r " + i)
+                    if "h" in cond_1:
+                        pass
+                    else:
+                        print("cloning again...")
+                    sys("git clone " + url + hide[0])
+            else:
+                print("Cloning " + i + words[4])
+                sys("git clone " + url + hide[0])
             clear()
             chdir(i)
             print(words[0] + i + words[4])

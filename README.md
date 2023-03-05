@@ -73,8 +73,17 @@ You can put several apps to be installed for example
 ```
 packarch.aur.install("lutris wine proton vim")
 ```
-Las apps a instalar se tienen que separar por espacios
-**possibly add the conditions in a future update**
+The apps to be installed must be separated by spaces
+
+##### Conditions:
+- ```h``` It serves to hide any text output
+- ```f``` It serves to force installation
+Both conditions are combinable regardless of order
+The syntax of conditions is more or less like that: 
+```
+packarch.aur.install("visual-studio-code-bin","h")
+                                               ^-It can also be f or be together regardless of order
+```
 #### Aur.Manager
 This option is to install from the AUR but with a manager like Yay or Paru
 
