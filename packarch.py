@@ -206,3 +206,28 @@ def get_list(list, cond1=""):
         sys("pacman -" + options[0] + sp + list)
     else:
         sys("pacman -Ss " + list)
+
+
+def clone(names, route="", cond=""):
+    for i in names.split():
+        if route == "":
+            chdir("/tmp")
+            print("No route selected\nCloning in /tmp...")
+            if i in listdir("/tmp"):
+                print("Already Cloned")
+                sl(1)
+        else:
+            chdir(route)
+        if "f" in cond:
+            if i in listdir("/tmp") or listdir(route):
+                print("Already Cloned")
+                sl(1)
+                print("but... Force is Activated :/")
+                sl(1)
+                print("removing original clone...")
+                sl(1)
+                sys("sudo rm -r " + i)
+        sys("git clone " + "https://aur.archlinux.org/" + i + ".git")
+        if "i" in cond:
+            chdir(i)
+            sys("makepkg -si --noconfirm")

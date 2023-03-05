@@ -155,6 +155,22 @@ packarch.get_list("package names","condition")
 - ```o``` search in repositories
 - ```l``` search locally
 - Above conditions + ```e``` :Take out a description of the package depending on the first condition 
+
+#### Clone
+It serves to clone a package from the aur
+
+An example of its syntax:
+``` 
+packarch.clone("lutris","/home/tom","i")
+                   î        î        î-Condition
+                   |        |-Route where you are going to clone, if this empty will clone in /tmp
+                   |-Attack package to clone
+```
+##### Condiciones
+- ```i``` It serves so that after the package is clone it is installed immediately
+- ```f``` It serves that if the package is already cloned and clone again
+
+Both conditions are combinable regardless of order
 ### Adding some extra data:
 This project was created as a dipurcation of my other project named [**Arch-App-Installer**](https://github.com/Tom5521/Arch-App-Installer)
 And this project will apparently take its own path since the packarch.py of the project mentioned above will stay in version 1.0.0 for syntax issues
