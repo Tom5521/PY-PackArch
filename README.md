@@ -166,7 +166,7 @@ packarch.clone("lutris","/home/tom","i")
                    |        |-Route where you are going to clone, if this empty will clone in /tmp
                    |-Attack package to clone
 ```
-##### Condiciones
+##### Conditions
 - ```i``` It serves so that after the package is clone it is installed immediately
 - ```f``` It serves that if the package is already cloned and clone again
 
