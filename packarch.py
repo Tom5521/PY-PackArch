@@ -176,6 +176,32 @@ class aur:
                 clear()
                 installed()
 
+    def clone(names, route="", cond="", command=""):
+        for i in names.split():
+            if route == "":
+                chdir("/tmp")
+                print("No route selected\nCloning in /tmp...")
+                if i in listdir("/tmp"):
+                    print("Already Cloned")
+                    sl(1)
+            else:
+                chdir(route)
+            if "f" in cond:
+                if i in listdir("/tmp") or listdir(route):
+                    print("Already Cloned")
+                    sl(1)
+                    print("but... Force is Activated :/")
+                    sl(1)
+                    print("removing original clone...")
+                    sl(1)
+                    sys("sudo rm -r " + i)
+            sys("git clone " + "https://aur.archlinux.org/" + i + ".git")
+            if "i" in cond:
+                chdir(i)
+                sys("makepkg -si --noconfirm")
+            if "c" in cond:
+                sys(command)
+
 
 def upgrade(condu_1="", condu_2=""):
     match condu_1:
@@ -208,8 +234,8 @@ def get_list(list, cond1=""):
         sys("pacman -Ss " + list)
 
 
-def clone(names, route="", cond=""):
-    for i in names.split():
+def clone(link, route="", cond="", command=""):
+    for i in link.split():
         if route == "":
             chdir("/tmp")
             print("No route selected\nCloning in /tmp...")
@@ -227,7 +253,14 @@ def clone(names, route="", cond=""):
                 print("removing original clone...")
                 sl(1)
                 sys("sudo rm -r " + i)
-        sys("git clone " + "https://aur.archlinux.org/" + i + ".git")
+        sys("git clone " + i)
         if "i" in cond:
             chdir(i)
             sys("makepkg -si --noconfirm")
+        if "c" in cond:
+            sys(command)
+
+
+def update_me():
+    sys("pip install py-packarch --upgrade")
+    sys("pip3 install py-packarch --upgrade")

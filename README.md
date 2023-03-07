@@ -17,7 +17,7 @@ wget https://raw.githubusercontent.com/Tom5521/PY-pacman/master/packarch.py
 ```
 Or can install it using this command ```pip install py-packarch```
 
-To update the library use ```pip install py-packarch --upgrade```
+To update the library use ```pip install py-packarch --upgrade``` or the function ```update_me()``` 
 
 You can import it in a more comfortable way by writing ```import packarch as pacman``` at the top of the file
 
@@ -156,21 +156,48 @@ packarch.get_list("package names","condition")
 - ```l``` search locally
 - Above conditions + ```e``` :Take out a description of the package depending on the first condition 
 
-#### Clone
+#### Aur Clone
 It serves to clone a package from the aur
 
 An example of its syntax:
 ``` 
-packarch.clone("lutris","/home/tom","i")
+packarch.aur.clone("lutris neovim-git","/home/tom","i")
                    î        î        î-Condition
                    |        |-Route where you are going to clone, if this empty will clone in /tmp
                    |-Attack package to clone
 ```
+
+You can clone many repositories on the same route by putting the name in the Aur followed by a space
 ##### Conditions
 - ```i``` It serves so that after the package is clone it is installed immediately
 - ```f``` It serves that if the package is already cloned and clone again
-
+- ```c``` It serves to execute a command in the folder where it is cloned
+    It is used like this:
+    ```
+    packarch.aur.clone("lutris","/tmp","c","sudo pacman -Syu")
+                                                                        ^       ^-The command that will be executed
+                                                                        |-The condition
 Both conditions are combinable regardless of order
+
+#### Clone
+Es lo mismo que lo anterior pero sirve para clonar cualquier repositorio
+
+Un ejemplo de su sintaxis:
+```
+packarch.clone("https://github.com/Tom5521/PY-PackArch.git","/tmp","fi")
+```
+
+You can clone several repositories on the same route separating the URLs by spaces
+
+##### Conditions
+- ```i``` It serves so that after the package is clone it is installed immediately  ,It only serves if it is installable with MakePkg
+- ```f``` It serves that if the package is already cloned and clone again
+- ```c``` It serves to execute a command in the folder where it is cloned
+    It is used like this:
+    ```
+    packarch.clone("https://github.com/Tom5521/PY-PackArch.git","/tmp","c","sudo pacman -Syu")
+                                                                        ^       ^-The command that will be executed
+                                                                        |-The condition
 ### Adding some extra data:
 This project was created as a dipurcation of my other project named [**Arch-App-Installer**](https://github.com/Tom5521/Arch-App-Installer)
 And this project will apparently take its own path since the packarch.py of the project mentioned above will stay in version 1.0.0 for syntax issues
