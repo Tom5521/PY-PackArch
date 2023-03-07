@@ -175,8 +175,8 @@ You can clone many repositories on the same route by putting the name in the Aur
     It is used like this:
     ```
     packarch.aur.clone("lutris","/tmp","c","sudo pacman -Syu")
-                                                                        ^       ^-The command that will be executed
-                                                                        |-The condition
+                                        ^       ^-The command that will be executed
+                                        |-The condition
 Both conditions are combinable regardless of order
 
 #### Clone
