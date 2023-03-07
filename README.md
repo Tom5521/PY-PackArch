@@ -198,6 +198,7 @@ You can clone several repositories on the same route separating the URLs by spac
     packarch.clone("https://github.com/Tom5521/PY-PackArch.git","/tmp","c","sudo pacman -Syu")
                                                                         ^       ^-The command that will be executed
                                                                         |-The condition
+    ```
 ### Adding some extra data:
 This project was created as a dipurcation of my other project named [**Arch-App-Installer**](https://github.com/Tom5521/Arch-App-Installer)
 And this project will apparently take its own path since the packarch.py of the project mentioned above will stay in version 1.0.0 for syntax issues
