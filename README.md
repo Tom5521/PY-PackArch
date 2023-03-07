@@ -180,9 +180,9 @@ You can clone many repositories on the same route by putting the name in the Aur
 Both conditions are combinable regardless of order
 
 #### Clone
-Es lo mismo que lo anterior pero sirve para clonar cualquier repositorio
+It is the same as the above but it serves to clone any repository
 
-Un ejemplo de su sintaxis:
+An example of its syntax:
 ```
 packarch.clone("https://github.com/Tom5521/PY-PackArch.git","/tmp","fi")
 ```
