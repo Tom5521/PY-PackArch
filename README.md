@@ -23,6 +23,10 @@ You can import it in a more comfortable way by writing ```import packarch as pac
 
 ## Functions:
 
+
+#### Version
+
+print version of the library with ```packarch.version()```
 #### Check
 
 Check if the package entered is installed
