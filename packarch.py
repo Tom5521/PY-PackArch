@@ -30,6 +30,9 @@ class verbose:
         hide[0] = ""
         hide[1] = ""
         hide[2] = ""
+        global hide_all
+        hide_all = True
+        return hide_all
 
     def aur():
         hide[2] = ""
@@ -121,7 +124,7 @@ class aur:
                 print("Already Cloned")
                 sl(1)
                 if force == True:
-                    if "h" in cond_1:
+                    if "h" in cond_1 or hide_all == True:
                         pass
                     else:
                         print("but... Force is Activated :/")
