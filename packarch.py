@@ -249,12 +249,13 @@ def clone(link, route="", cond="", command=""):
             chdir(route)
         if "f" in cond:
             if i in listdir("/tmp") or listdir(route):
-                print("Already Cloned")
-                sl(1)
-                print("but... Force is Activated :/")
-                sl(1)
-                print("removing original clone...")
-                sl(1)
+                if "h" in cond or hide_all == True:
+                    print("Already Cloned")
+                    sl(1)
+                    print("but... Force is Activated :/")
+                    sl(1)
+                    print("removing original clone...")
+                    sl(1)
                 sys("sudo rm -r " + i)
         sys("git clone " + i)
         if "i" in cond:
