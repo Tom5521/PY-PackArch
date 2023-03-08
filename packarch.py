@@ -268,3 +268,7 @@ def clone(link, route="", cond="", command=""):
 def update_me():
     sys("pip install py-packarch --upgrade")
     sys("pip3 install py-packarch --upgrade")
+
+
+def version():
+    print("PY-PackArch \nVersion 1.8.2\nUnder the gpl-3.0 licence")
