@@ -1,8 +1,7 @@
 # Created by Tom5521 or Angel
 # Under the GPL license 3.0
 
-from os import getcwd, chdir, listdir
-from os import system as sys
+from os import getcwd, chdir, listdir, system as sys
 from time import sleep as sl
 
 current_directoy = getcwd()
