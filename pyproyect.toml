@@ -1,0 +1,20 @@
+[project]
+name = "PY-packArch"
+version = "1.8.5" # Remember also to modify the one of the function version
+authors = [
+    { name="Tom5521", email="mismarttv321@gmail.com" },
+]
+description = "Small library to manage pacman package manager and install AUR"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "GPL-3.0"}
+keywords=["pacman", "arch linux","linux"]
+classifiers = [
+    "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
+    "Operating System :: Unix",
+    "Topic :: System :: Software Distribution"
+]
+
+[project.urls]
+"Homepage" = "https://github.com/Tom5521/PY-PackArch"
+"Bug Tracker" = "https://github.com/Tom5521/PY-PackArch/issues"
