@@ -18,10 +18,10 @@ setup(
     url="https://github.com/Tom5521/PY-PackArch",
     py_modules=["packarch"],
     keywords=["pacman", "arch linux"],
-    download_url="https://github.com/Tom5521/PY-pacman/archive/refs/tags/1.8.4.tar.gz",
+    download_url="https://github.com/Tom5521/PY-PackArch/archive/refs/tags/1.8.4.zip",
     license="GPL-3.0",
     classifiers=[
-        "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
+        "License :: GNU General Public License v3 or later (GPLv3+)",
         "Operating System :: Unix",
         "Topic :: System :: Software Distribution",
     ],
