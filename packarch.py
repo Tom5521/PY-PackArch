@@ -271,4 +271,8 @@ def update_me():
 
 
 def version():
-    print("PY-PackArch \nVersion 1.8.2\nUnder the gpl-3.0 licence")
+    print("PY-PackArch \nVersion 1.8.3\nUnder the gpl-3.0 licence")
+
+
+def info(package):
+    sys("pacman -Si " + package)
