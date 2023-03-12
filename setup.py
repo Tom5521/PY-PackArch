@@ -9,7 +9,7 @@ LONG_DESCRIPTION = (HERE / "README.md").read_text(encoding="utf-8")
 
 setup(
     name="PY-packArch",
-    version="1.8.3",  # Remember also to modify the one of the function version
+    version="1.8.4",  # Remember also to modify the one of the function version
     description="Small library to manage pacman package manager and install AUR",
     long_description=LONG_DESCRIPTION,
     long_description_content_type="text/markdown",
