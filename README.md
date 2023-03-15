@@ -208,6 +208,61 @@ Print information about a package
 ```
 packarch.info("lutris")
 ```
+Exit:
+```
+Repositorio               : community
+Nombre                    : lutris
+Versión                   : 0.5.12-2
+Descripción               : Open Gaming Platform
+Arquitectura              : any
+URL                       : https://lutris.net
+Licencias                 : GPL3
+Grupos                    : Nada
+Provee                    : Nada
+Depende de                : cabextract  curl  glib2  gnome-desktop  gtk3  mesa-utils  p7zip  psmisc  python-certifi
+                            python-dbus  python-distro  python-evdev  python-gobject  python-lxml  python-pillow
+                            python-requests  python-yaml  unzip  webkit2gtk  xorg-xrandr
+Dependencias opcionales   : gamemode: Allows games to request a temporary set of optimisations
+                            gvfs: GVFS backend
+                            innoextract: Extract Inno Setup installers
+                            lib32-gamemode: Allows games to request a temporary set of optimisations
+                            lib32-vkd3d: Vulkan 3D support
+                            lib32-vulkan-icd-loader: Vulkan support
+                            vkd3d: Vulkan 3D support
+                            vulkan-icd-loader: Vulkan support
+                            wine: Windows support
+                            xorg-xgamma: Restore gamma on game exit
+En conflicto con          : Nada
+Remplaza a                : Nada
+Tamaño de la descarga     : 745,27 KiB
+Tamaño de la instalación  : 2806,23 KiB
+Encargado                 : Maxime Gauduin <alucryd@archlinux.org>
+Fecha de creación         : mié 07 dic 2022 13:30:26
+Validado por              : Suma MD5  Suma SHA-256  Firma
+```
+#### Get version
+An example of its syntax:
+´´´
+packarch.get_version("lutris wine nano")
+´´´
+Exit:
+´´´
+lutris is in version 0.5.12-2
+wine is in version 8.3-1
+nano is in version 7.2-1
+´´´
+Conditions:
+```h``` It only shows the version without the name of the package
+sintaxis:
+```
+packarch.get_version("lutris wine nano","h")
+```
+Exit:
+```
+0.5.12-2
+8.3-1
+7.2-1
+```
 ### Adding some extra data:
 This project was created as a dipurcation of my other project named [**Arch-App-Installer**](https://github.com/Tom5521/Arch-App-Installer)
 And this project will apparently take its own path since the packarch.py of the project mentioned above will stay in version 1.0.0 for syntax issues

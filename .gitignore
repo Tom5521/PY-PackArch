@@ -6,4 +6,5 @@ build
 packarch.egg-info
 PY_packArch.egg-info
 links.txt
-data
+tests
+saved_data

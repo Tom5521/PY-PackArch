@@ -270,8 +270,20 @@ def update_me():
 
 
 def version():
-    print("PY-PackArch \nVersion 1.8.6\nUnder the gpl-3.0 licence")
+    print("PY-PackArch \nCreated by Tom5521 \nVersion 1.9.0\nUnder the gpl-3.0 licence")
 
 
 def info(package):
     sys("pacman -Si " + package)
+
+
+def get_version(packages, cond=""):
+    for i in packages.split():
+        sys("pacman -Q " + i + " > /tmp/transpaced_data")
+        opendata = open("/tmp/transpaced_data", "r")
+        readata = opendata.read()
+        if "h" in cond:
+            print(readata.split()[1])
+        else:
+            print(i + " is in version", (readata.split()[1]))
+    sys("rm /tmp/transpaced_data")
