@@ -242,15 +242,15 @@ Validado por              : Suma MD5  Suma SHA-256  Firma
 ```
 #### Get version
 An example of its syntax:
-´´´
+```
 packarch.get_version("lutris wine nano")
-´´´
+```
 Exit:
-´´´
+```
 lutris is in version 0.5.12-2
 wine is in version 8.3-1
 nano is in version 7.2-1
-´´´
+```
 Conditions:
 ```h``` It only shows the version without the name of the package
 sintaxis:
