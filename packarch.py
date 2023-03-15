@@ -270,7 +270,7 @@ def update_me():
 
 
 def version():
-    print("PY-PackArch \nCreated by Tom5521 \nVersion 1.9.0\nUnder the gpl-3.0 licence")
+    print("PY-PackArch \nCreated by Tom5521 \nVersion 1.9.1\nUnder the gpl-3.0 licence")
 
 
 def info(package):
