@@ -1,7 +1,6 @@
 <img src="https://res.cloudinary.com/dqjsgmkxo/image/upload/v1676571071/Captura_de_pantalla_de_2023-02-16_15-08-13_iiarxj.png" width="1000" height="100" />
 
 
-[![wakatime](https://wakatime.com/badge/github/Tom5521/PY-pacman.svg)](https://wakatime.com/badge/github/Tom5521/PY-pacman)
 [![CodeFactor](https://www.codefactor.io/repository/github/tom5521/py-packarch/badge)](https://www.codefactor.io/repository/github/tom5521/py-packarch)
 ![GitHub repo size](https://img.shields.io/github/repo-size/Tom5521/PY-pacman)
 ![GitHub last commit](https://img.shields.io/github/last-commit/Tom5521/PY-pacman)
@@ -17,16 +16,20 @@ wget https://raw.githubusercontent.com/Tom5521/PY-pacman/master/packarch.py
 ```
 Or can install it using this command ```pip install py-packarch```
 
-To update the library use ```pip install py-packarch --upgrade``` or the function ```update_me()``` 
+To update the library use ```pip install py-packarch --upgrade``` or the function ```upgrade_me()``` 
 
 You can import it in a more comfortable way by writing ```import packarch as pacman``` at the top of the file
 
 ## Functions:
 
 
+
 #### Version
 
-print version of the library with ```packarch.version()```
+print version of this library with ```packarch.version()```
+
+#### Manual
+Go to this page whith ```packarch.manual()```
 #### Check
 
 Check if the package entered is installed
@@ -63,11 +66,11 @@ packarch.install("wine","-v","--needed")
 ```
 
 
-#### Refresh
+#### Update
 
 It serves to update the repositories
 ```
-packarch.refresh()
+packarch.update()
 ```
 #### Aur.Install
 

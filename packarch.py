@@ -85,7 +85,7 @@ def install(nombre_pacman, cond_1="", cond_2=""):
             installed()
 
 
-def refresh():
+def update():
     clear()
     print(words[3], words[4])
     sys("sudo pacman -Syy " + hide[0])
@@ -264,13 +264,13 @@ def clone(link, route="", cond="", command=""):
             sys(command)
 
 
-def update_me():
+def upgrade_me():
     sys("pip install py-packarch --upgrade")
     sys("pip3 install py-packarch --upgrade")
 
 
 def version():
-    print("PY-PackArch \nCreated by Tom5521 \nVersion 1.9.1\nUnder the gpl-3.0 licence")
+    print("PY-PackArch \nCreated by Tom5521 \nVersion 1.9.2\nUnder the gpl-3.0 licence")
 
 
 def info(package):
@@ -287,3 +287,7 @@ def get_version(packages, cond=""):
         else:
             print(i + " is in version", (readata.split()[1]))
     sys("rm /tmp/transpaced_data")
+
+
+def manual():
+    sys("firefox https://github.com/Tom5521/PY-PackArch/blob/master/README.md")
