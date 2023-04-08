@@ -226,11 +226,10 @@ def get_list(list, cond1=""):
             options[0] = "Ss"
             if "e" in cond1:
                 options[0] = "Si"
-        else:
-            if "l" in cond1:
-                options[0] = "Qs"
-                if "e" in cond1:
-                    options[0] = "Q"
+        elif "l" in cond1:
+            options[0] = "Qs"
+            if "e" in cond1:
+                options[0] = "Q"
         sys("pacman -" + options[0] + sp + list)
     else:
         sys("pacman -Ss " + list)
