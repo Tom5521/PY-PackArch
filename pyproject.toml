@@ -1,6 +1,6 @@
 [project]
 name = "PY-packArch"
-version = "1.9.3"
+version = "1.9.3-1"
 authors = [
     { name="Tom5521", email="mismarttv321@gmail.com" },
 ]
@@ -15,7 +15,8 @@ classifiers = [
     "Topic :: System :: Software Distribution",
     "Environment :: Console"
 ]
-
+[build-system]
+requires = "Tom-Toolbox"
 [project.urls]
 "Homepage" = "https://github.com/Tom5521/PY-PackArch"
 "Bug Tracker" = "https://github.com/Tom5521/PY-PackArch/issues"

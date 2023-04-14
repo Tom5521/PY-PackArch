@@ -3,6 +3,9 @@
 
 from os import getcwd, chdir, listdir, system as sys
 from time import sleep as sl
+from Toolbox.ansi_colors import *
+from Toolbox.tools import command_read
+
 
 current_directoy = getcwd()
 
@@ -10,13 +13,13 @@ hide = [">/dev/null 2>&1", "|ls > .out && rm -rf .out", "clear"]
 sp = " "
 All_text_cond = True
 words = [
-    "Installing ",  # 0
-    "Installed",  # 1
-    "Update Complete",  # 2
-    "Updating repos",  # 3
+    c.yellow("Installing "),  # 0
+    c.green("Installed"),  # 1
+    bc.green("Update Complete"),  # 2
+    c.yellow("Updating repos"),  # 3
     "...",  # 4
-    "Updating",  # 5
-    "Searching",  # 6
+    c.yellow("Updating"),  # 5
+    c.yellow("Searching"),  # 6
 ]
 
 
@@ -50,18 +53,10 @@ def installed():
 
 
 def check(nombre_check):
-    comprobator = False
-    chdir(current_directoy)
-    clear()
-    sys("pacman -Q " + nombre_check + "> /tmp/tmp-check")
-    optemp = open("/tmp/tmp-check", "r")
-    readtemp = optemp.read()
-    if nombre_check in readtemp:
-        comprobator = True
+    if check in command_read(f"pacman -Qs {check}"):
+        return True
     else:
-        comprobator = False
-    sys("rm /tmp/tmp-check")
-    return comprobator
+        return False
 
 
 def install(nombre_pacman, cond_1="", cond_2=""):
@@ -103,7 +98,7 @@ def remove(removes, cond_1=""):
         else:
             sys("sudo pacman -R" + sp + removes + " --noconfirm" + hide[0])
     else:
-        print("El o los paquetes no se encontraron en su totalidad")
+        print("The package or packages were not found in their entirety")
     hide[0] = ">/dev/null 2>&1"
 
 
@@ -269,7 +264,9 @@ def upgrade_me():
 
 
 def version():
-    print("PY-PackArch \nCreated by Tom5521 \nVersion 1.9.2\nUnder the gpl-3.0 licence")
+    print(
+        "PY-PackArch \nCreated by Tom5521 \nVersion 1.9.3-1\nUnder the gpl-3.0 licence"
+    )
 
 
 def info(package):
@@ -278,15 +275,12 @@ def info(package):
 
 def get_version(packages, cond=""):
     for i in packages.split():
-        sys("pacman -Q " + i + " > /tmp/transpaced_data")
-        opendata = open("/tmp/transpaced_data", "r")
-        readata = opendata.read()
+        readata = command_read("pacman -Q " + i)
         if "h" in cond:
             print(readata.split()[1])
         else:
             print(i + " is in version", (readata.split()[1]))
-    sys("rm /tmp/transpaced_data")
 
 
 def manual():
-    sys("firefox https://github.com/Tom5521/PY-PackArch/blob/master/README.md")
+    sys("xdg-open https://github.com/Tom5521/PY-PackArch/blob/master/README.md")
